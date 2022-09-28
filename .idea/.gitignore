@@ -1,19 +1,4 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-
-# Intellij project files
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# go.gitignore from https://github.com/github/gitignore/blob/master/Go.gitignore
+### Go template
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -29,3 +14,12 @@
 
 # Dependency directories (remove the comment below to include it)
 vendor/
+
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+
