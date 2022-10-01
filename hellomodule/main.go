@@ -14,7 +14,6 @@ func init() {
 func fastHTTPHandler(ctx *fasthttp.RequestCtx) {
 	logger.Info("hello, go module", zap.ByteString("uri", ctx.RequestURI()))
 }
-
 func main() {
 	fasthttp.ListenAndServe(":8081", fastHTTPHandler)
 }
