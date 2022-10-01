@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var a, b, c = 1, "a variable string ", false
+var a, b, c = 1, "a variable string ", true
 
 var (
 	d = float32(10.0)
