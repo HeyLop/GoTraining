@@ -13,4 +13,6 @@ var (
 func main() {
 	fmt.Println(a, b, c)
 	fmt.Println(d, e, f)
+	g := 10
+	fmt.Println(g)
 }
