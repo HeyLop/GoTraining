@@ -6,6 +6,21 @@ import (
 	"time"
 )
 
+func readByExtSwitch(ext string) {
+	switch ext {
+	case "json":
+		fmt.Println("this is json")
+	case "yml":
+		fmt.Println("this is yaml")
+	case "ini":
+		fmt.Println("this is ini")
+	default:
+		fmt.Println("un know file type ")
+
+	}
+
+}
+
 func main() {
 	//fmt.Println(runtime.GOOS)
 	if runtime.GOOS == "linux" {
@@ -28,9 +43,46 @@ func main() {
 		fmt.Println(i)
 	}
 
+	s := "中国人"
+	for k, v := range s {
+		fmt.Printf("the num is %d the letter is %s the byte string is %b \n", k, string(v), v)
+	}
+
+	// map，for遍历
+	var m1 = map[string]int{
+		"happy":  10,
+		"flower": 11,
+		"leaf":   12,
+	}
+	for k, v := range m1 {
+		fmt.Printf("the map key is %s,the map vaule value is %d \n ", k, v)
+	}
+
+	//带label带for循环
+	var cl1 = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	var sum int
+loop1:
+	for i := 0; i < len(cl1); i++ {
+		if cl1[i]%2 == 0 {
+			continue loop1
+		}
+		sum += cl1[i]
+	}
+	//fmt.Println(sum)
+	fmt.Printf("the cl1 sum is %d\n", sum)
+
 	//for循环多变量
 	for a, b, c := 0, 1, 2; (a < 10) && (b < 15) && (c < 20); a, b, c = a+1, b+1, c+1 {
 		fmt.Println(a, b, c)
+	}
+
+	//break
+	var sc1 = []int{5, 9, 7, 10, 8, 3}
+	for i := 0; i < len(sc1); i++ {
+		if sc1[i]%2 == 0 {
+			fmt.Printf("the slice sc1 frist even number is %d\n", sc1[i])
+			break
+		}
 	}
 
 	fmt.Println("for-01")
@@ -56,5 +108,9 @@ func main() {
 		}(k, v)
 	}
 	time.Sleep(time.Second * 5)
+
+	var ext = "json"
+	readByExtSwitch(ext)
+	readByExtSwitch("txt")
 
 }
