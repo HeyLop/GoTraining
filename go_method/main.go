@@ -21,7 +21,8 @@ func (t T) Get() int {
 
 func (t *T) Set(a int) int {
 	t.a = a
-	return a
+	return t.a
+
 }
 
 func main() {
