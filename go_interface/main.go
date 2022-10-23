@@ -38,9 +38,11 @@ func main() {
 		s:      "demo",
 	}
 	sl := make([]byte, len("hello word"))
-	s.Reader.Read(sl)
+	//s.Reader.Read(sl)
+	s.Read(sl)
 	fmt.Println("sl string value:", string(sl))
 	//fmt.Println("the print []byte :", string(io.Reader.Read(sl)))
-	s.myInt.add(5)
+	//s.myInt.add(5)
+	s.add(5)
 	fmt.Println("s.myInt value:", *(s.myInt))
 }
